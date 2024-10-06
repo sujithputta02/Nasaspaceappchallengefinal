@@ -1,0 +1,90 @@
+/* General body and styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevents extra scrolling */
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover; /* Ensures the video covers the background */
+}
+
+.header {
+    display: block;
+    width: 100%;
+    background-color: rgba(39, 38, 38, 0.8);
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Keeps the header on top of the video */
+}
+
+.logo-container {
+    display: inline-block;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.title {
+    display: inline-block;
+    color: bisque;
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    padding-left: 450px;
+    vertical-align: middle;
+    justify-content: center;
+}
+h2{
+    font-size: 3em;
+}
+
+.box {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('nasaimages/box\ background\ image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Semi-transparent background */
+    width: 50%;
+    max-width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.box:hover{
+    background-image: url('nasaimages/box\ background\ image.png');
+}
+
+.button {
+    background-color: greenyellow;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 200px;
+    height: 100px;
+}
+#but{
+    font-size: 2em;
+    font-family: 'Poppins';
+}
+.button:hover {
+    background-color: rgb(191, 219, 30);
+}
+
+.button:active {
+    background-color: rgb(0, 0, 0);
+}

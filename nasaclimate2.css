@@ -1,0 +1,250 @@
+body {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('nasaimages/2ndpage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(39, 38, 38, 0.8);
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo1, #logo2 {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#hed1 {
+    color: bisque;
+    font-size: 1.8em;
+    text-align: center;
+    letter-spacing: 8px;
+    flex-grow: 1;
+    padding-right: 150px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+.menu-text {
+    color: bisque;
+    font-size: 1.2em;
+    margin-right: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;  /* Adjust this based on the height of your header */
+    padding: 20px;
+    gap: 20px;
+}
+
+#he1 {
+    color: white;
+    font-size: 30pt;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 130px;
+    padding-left: 30px;
+}
+
+/* Adjusted box styling to center the text */
+.box {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5));
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden; /* Ensures the blur stays within the box */
+}
+
+/* Box 1, 2, 3 with blurred background */
+#box1, #box2, #box3 {
+    position: relative;
+}
+
+#box1::before, #box2::before, #box3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px); /* Apply blur to the background */
+    z-index: -1; /* Keep the blur behind the content */
+}
+
+#box1::before {
+    background-image: url('nasaimages/indiana (6x1.5).jpg');
+}
+
+#box2::before {
+    background-image: url('nasaimages/box 2 background.jpg');
+}
+
+#box3::before {
+    background-image: url('nasaimages/box 3 backgroud.jpg');
+}
+
+/* Remove blur and apply linear-gradient on hover */
+#box1:hover::before, #box2:hover::before, #box3:hover::before {
+    filter: blur(0); /* Remove the blur on hover */
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('nasaimages/indiana (6x1.5).jpg');
+    transform: scale(1.05); /* Scale the image slightly */
+    z-index: -1; /* Keep the image behind the content */
+}
+
+/* Hover for #box2 */
+#box2:hover::before {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('nasaimages/box 2 background.jpg');
+}
+
+/* Hover for #box3 */
+#box3:hover::before {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('nasaimages/box 3 backgroud.jpg');
+}
+
+#box1:hover, #box2:hover, #box3:hover {
+    transform: scale(1.05); /* Slight scaling for the entire box on hover */
+}
+
+/* Text inside the boxes stays unaffected */
+#box1 > *, #box2 > *, #box3 > * {
+    position: relative;
+    z-index: 1; /* Ensure the text remains above the background image */
+}
+
+#he2:hover {
+    color: rgb(255, 255, 255);
+    text-transform: scale(1.0);
+}
+
+#he3:hover {
+    color: rgb(255, 255, 255);
+    text-transform: scale(1.0);
+}
+
+.del:hover {
+    font-family: 'EB Garamond';
+}
+
+#he2, #he3, #he4 {
+    font-size: 25pt;
+    color: white;
+    margin: 0;
+    text-decoration: none;
+}
+
+.de1 {
+    font-size: 14pt;
+    color: white;
+    margin-top: 5px;
+}
+
+.page {
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    #logo1, #logo2 {
+        width: 50px;
+    }
+
+    #hed1 {
+        font-size: 1.5em;
+    }
+
+    .menu-text {
+        font-size: 0.5em;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+    }
+
+    #he2, #he3, #he4 {
+        font-size: 20pt;
+    }
+
+    .de1 {
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    #logo1, #logo2 {
+        width: 70px;
+    }
+
+    #hed1 {
+        font-size: 1.6em;
+    }
+
+    .box {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #logo1, #logo2 {
+        width: 100px;
+    }
+
+    #hed1 {
+        font-size: 2em;
+    }
+
+    .box {
+        width: 50%;
+    }
+
+    #he2, #he3, #he4 {
+        font-size: 25pt;
+    }
+
+    .de1 {
+        font-size: 14pt;
+    }
+}

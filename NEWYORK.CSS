@@ -1,0 +1,196 @@
+body {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('nasaimages/newyork.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start; /* Align elements to the left */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(39, 38, 38, 0.8);
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    height: 100px; /* Set a fixed height for the header */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Align the logo container to the left */
+}
+
+#logo1, #logo2 {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Auto-aligns the heading to the right */
+    margin-right: 20px; /* Adds space from the edge */
+}
+
+#pin {
+    width: 50px; /* Adjust size as necessary */
+    margin-right: 10px; /* Space between pin and heading */
+}
+
+#hed1 {
+    color: bisque;
+    font-size: 60pt; /* Increased font size for broader title */
+    text-align: left; /* Align left for better appearance */
+    letter-spacing: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    padding-top: 120px; /* Leave space for the fixed header */
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Card styles */
+.card {
+    width: 90%; /* Make card width responsive */
+    max-width: 800px; /* Max width to prevent it from becoming too large */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 150rem; /* Perspective for 3D effect */
+    height: 400px;
+    background: none;
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+.card-side {
+    height: 100%;
+    width: 100%; /* Set width to 100% for each side of the card */
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    color: white;
+}
+
+.card-side.back {
+    transform: rotateY(-180deg); /* Hide the back side initially */
+    background-color: #4158D0;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('nasaimages/statue.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.card-side.front {
+    background-color: rgba(39, 38, 38, 0.8);
+}
+
+.card:hover .card-side.front {
+    transform: rotateY(180deg); /* Rotate front side on hover */
+}
+
+.card:hover .card-side.back {
+    transform: rotateY(0deg); /* Show back side on hover */
+}
+
+#h1e {
+    font-size: 50pt;
+    margin-top: -10px;
+    letter-spacing: 10px;
+}
+
+.button {
+    font-family: 'Poppins';
+    font-size: 30pt;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    background-color: rgb(43, 38, 38);
+    cursor: pointer;
+    color: white;
+    margin: 0 auto; /* Center button horizontally */
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgb(165, 173, 90);
+}
+
+
+
+/* Media Queries */
+
+/* For screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    #logo1, #logo2 {
+        width: 100px;
+    }
+    
+    #hed1 {
+        font-size: 2em;
+        letter-spacing: 5px;
+    }
+
+    #pin {
+        width: 30px;
+    }
+
+    .button {
+        font-size: 20pt;
+    }
+}
+
+/* For screens between 600px and 900px */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    #logo1, #logo2 {
+        width: 150px;
+    }
+
+    #hed1 {
+        font-size: 2.5em;
+    }
+
+    #pin {
+        width: 40px;
+    }
+
+    .button {
+        font-size: 25pt;
+    }
+}
+
+/* For screens larger than 900px */
+@media only screen and (min-width: 900px) {
+    #logo1, #logo2 {
+        width: 200px;
+    }
+
+    #hed1 {
+        font-size: 3em;
+    }
+}
